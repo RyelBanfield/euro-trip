@@ -23,34 +23,16 @@ export const getUsers = async () => {
   return users;
 };
 
-export const getUser = async (id) => {
-  const response = await fetch(`${usersEndpoint}/${id}`);
-  const user = await response.json();
-  return user;
-};
-
 export const getCountries = async () => {
   const response = await fetch(countriesEndpoint);
   const countries = await response.json();
   return countries;
 };
 
-export const getCountry = async (id) => {
-  const response = await fetch(`${countriesEndpoint}/${id}`);
-  const country = await response.json();
-  return country;
-};
-
 export const getFavourites = async () => {
   const response = await fetch(favouritesEndpoint);
   const favourites = await response.json();
   return favourites;
-};
-
-export const getFavourite = async (id) => {
-  const response = await fetch(`${favouritesEndpoint}/${id}`);
-  const favourite = await response.json();
-  return favourite;
 };
 
 export const postFavourite = async (data, accessToken) => {

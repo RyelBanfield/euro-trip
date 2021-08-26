@@ -3,8 +3,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import ProtectedRoute from './auth0/ProtectedRoute';
 import rootReducer from './redux/reducers';
+import ProtectedRoute from './auth0/ProtectedRoute';
 import Loading from './components/Loading';
 import NavBar from './components/NavBar';
 

@@ -1,9 +1,9 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { useDispatch } from 'react-redux';
 import { getUsers, postUser } from '../API';
+import { loadUserIntoStore } from '../redux/actions';
 import LoginButton from './buttons/LoginButton';
 import LogoutButton from './buttons/LogoutButton';
-import { loadUserIntoStore } from '../redux/actions';
 
 const AuthenticationButton = () => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();

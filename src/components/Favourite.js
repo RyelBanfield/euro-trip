@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import PropTypes from 'prop-types';
 
 const Favourite = ({ isFavourited }) => (
   <>
@@ -10,5 +10,9 @@ const Favourite = ({ isFavourited }) => (
     )}
   </>
 );
+
+Favourite.propTypes = {
+  isFavourited: PropTypes.bool.isRequired,
+};
 
 export default Favourite;
