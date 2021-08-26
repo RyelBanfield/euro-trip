@@ -5,6 +5,7 @@ import { loadCountriesIntoStore, loadFavouritesIntoStore } from '../redux/action
 import CountryComponent from '../components/Country';
 
 const Home = () => {
+  const user = useSelector((state) => state.user);
   const countries = useSelector((state) => state.countries);
 
   const dispatch = useDispatch();
@@ -27,7 +28,14 @@ const Home = () => {
       {countries.length > 0 && (
         <div className="countries">
           {countries.map((country) => (
-            <CountryComponent country={country} key={country.id} />
+            <CountryComponent
+              country={country}
+              isFavourited={
+                user.countries
+                  .find((favouriteCountry) => favouriteCountry.name === country.name) !== undefined
+              }
+              key={country.id}
+            />
           ))}
         </div>
       )}
