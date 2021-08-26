@@ -3,7 +3,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-// eslint-disable-next-line no-unused-vars
 import ProtectedRoute from './auth0/ProtectedRoute';
 import rootReducer from './redux/reducers';
 import Loading from './components/Loading';

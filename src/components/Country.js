@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Favourite from './Favourite';
 
 const Country = ({ country, isFavourited }) => (
@@ -38,5 +38,18 @@ const Country = ({ country, isFavourited }) => (
     </p>
   </div>
 );
+
+Country.propTypes = {
+  country: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    capital: PropTypes.string.isRequired,
+    population: PropTypes.string.isRequired,
+    language: PropTypes.string.isRequired,
+    demonym: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+    flag: PropTypes.string.isRequired,
+  }).isRequired,
+  isFavourited: PropTypes.bool.isRequired,
+};
 
 export default Country;
