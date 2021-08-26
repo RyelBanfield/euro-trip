@@ -1,6 +1,5 @@
 const LOAD_USER_INTO_STORE = 'LOAD_USER_INTO_STORE';
 const LOAD_COUNTRIES_INTO_STORE = 'LOAD_COUNTRIES_INTO_STORE';
-const LOAD_IMAGES_INTO_STORE = 'LOAD_IMAGES_INTO_STORE';
 const LOAD_FAVOURITES_INTO_STORE = 'LOAD_FAVOURITES_INTO_STORE';
 
 export const loadUserIntoStore = (user) => ({
@@ -11,11 +10,6 @@ export const loadUserIntoStore = (user) => ({
 export const loadCountriesIntoStore = (countries) => ({
   type: LOAD_COUNTRIES_INTO_STORE,
   payload: countries,
-});
-
-export const loadImagesIntoStore = (images) => ({
-  type: LOAD_IMAGES_INTO_STORE,
-  payload: images,
 });
 
 export const loadFavouritesIntoStore = (favourites) => ({
