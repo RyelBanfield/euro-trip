@@ -7,7 +7,7 @@ const Country = ({ country, isFavourited }) => (
     <Link className="country-link" to={`/countries/${country.name}`}>
       <h2 className="country-name">{country.name}</h2>
     </Link>
-    <Favourite isFavourited={isFavourited} />
+    <Favourite country={country} isFavourited={isFavourited} />
     <Link className="country-link" to={`/countries/${country.name}`}>
       <img src={country.flag} alt={country.name} />
     </Link>

@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: sans-serif;
 }
 
 a {
@@ -13,5 +13,9 @@ a {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=global.css.map */
