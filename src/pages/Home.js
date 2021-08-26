@@ -1,17 +1,23 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCountries } from '../API';
-import { loadCountriesIntoStore } from '../redux/actions';
+import { getCountries, getFavourites } from '../API';
+import { loadCountriesIntoStore, loadFavouritesIntoStore } from '../redux/actions';
 import CountryComponent from '../components/Country';
 
 const Home = () => {
   const countries = useSelector((state) => state.countries);
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     getCountries()
       .then((countries) => {
         dispatch(loadCountriesIntoStore(countries));
+      });
+
+    getFavourites()
+      .then((favourites) => {
+        dispatch(loadFavouritesIntoStore(favourites));
       });
   }, []);
 

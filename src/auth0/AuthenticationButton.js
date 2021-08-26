@@ -1,10 +1,14 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import { postUser } from '../API';
+import { useDispatch } from 'react-redux';
+import { getUsers, postUser } from '../API';
 import LoginButton from './buttons/LoginButton';
 import LogoutButton from './buttons/LogoutButton';
+import { loadUserIntoStore } from '../redux/actions';
 
 const AuthenticationButton = () => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+
+  const dispatch = useDispatch();
 
   if (isAuthenticated) {
     const userData = {
@@ -19,6 +23,10 @@ const AuthenticationButton = () => {
     getAccessTokenSilently()
       .then((accessToken) => {
         postUser(userData, accessToken);
+        getUsers()
+          .then((users) => {
+            dispatch(loadUserIntoStore(users.filter((user) => user.sub === userData.sub)[0]));
+          });
       });
   }
 
