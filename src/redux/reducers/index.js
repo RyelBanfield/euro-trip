@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
-import countriesReducer from './countries';
-import favouritesReducer from './favourites';
 import userReducer from './user';
+import countriesReducer from './countries';
+import imagesReducer from './images';
+import favouritesReducer from './favourites';
 
 const rootReducer = combineReducers({
-  countries: countriesReducer,
-  favourites: favouritesReducer,
   user: userReducer,
+  countries: countriesReducer,
+  images: imagesReducer,
+  favourites: favouritesReducer,
 });
 
 export default rootReducer;
