@@ -13,8 +13,9 @@ const store = createStore(rootReducer,
   // eslint-disable-next-line no-underscore-dangle
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-const Home = lazy(() => import('./components/Home'));
-const Profile = lazy(() => import('./components/Profile'));
+const Home = lazy(() => import('./pages/Home'));
+const Country = lazy(() => import('./pages/Country'));
+const Profile = lazy(() => import('./pages/Profile'));
 
 const App = () => {
   const { isLoading } = useAuth0();
@@ -30,6 +31,7 @@ const App = () => {
         <Suspense fallback={<Loading />}>
           <Switch>
             <Route exact path="/euro-trip" component={Home} />
+            <Route exact path="/countries/:id" component={Country} />
             <ProtectedRoute exact path="/profile" component={Profile} />
           </Switch>
         </Suspense>

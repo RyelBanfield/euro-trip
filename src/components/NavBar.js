@@ -8,7 +8,7 @@ const pages = [
 
 const NavBar = () => (
   <nav>
-    <Link to="/euro-trip">Review Nine</Link>
+    <Link to="/euro-trip">Euro Trip</Link>
     <div className="nav-links">
       {pages.map((page) => (
         <Link key={page.name} to={page.path}>
