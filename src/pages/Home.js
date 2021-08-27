@@ -32,7 +32,10 @@ const Home = () => {
               country={country}
               isFavourited={
                 user.countries
-                  .find((favouriteCountry) => favouriteCountry.name === country.name) !== undefined
+                  ? user.countries
+                    .find((favouriteCountry) => favouriteCountry.name === country.name)
+                    !== undefined
+                  : false
               }
               key={country.id}
             />
