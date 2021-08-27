@@ -23,18 +23,8 @@ const Favourite = ({ country, isFavourited }) => {
         country_id: country.id,
       };
       getAccessTokenSilently()
-        .then((accessToken) => postFavourite(favouriteData, accessToken))
-        .then(() => {
-          getFavourites()
-            .then((favourites) => {
-              dispatch(loadFavouritesIntoStore(favourites));
-            });
+        .then((accessToken) => postFavourite(favouriteData, accessToken));
 
-          getUsers()
-            .then((users) => {
-              dispatch(loadUserIntoStore(users.filter((userData) => userData.sub === user.sub)[0]));
-            });
-        });
       setIsFavouritedState(true);
     }
 
@@ -42,20 +32,20 @@ const Favourite = ({ country, isFavourited }) => {
       getAccessTokenSilently()
         .then((accessToken) => deleteFavourite(favourites
           .find((favourite) => favourite.user_id === user.id
-          && favourite.country_id === country.id).id, accessToken))
-        .then(() => {
-          getFavourites()
-            .then((favourites) => {
-              dispatch(loadFavouritesIntoStore(favourites));
-            });
+          && favourite.country_id === country.id).id, accessToken));
 
-          getUsers()
-            .then((users) => {
-              dispatch(loadUserIntoStore(users.filter((userData) => userData.sub === user.sub)[0]));
-            });
-        });
       setIsFavouritedState(false);
     }
+    setTimeout(() => {
+      getFavourites()
+        .then((favourites) => {
+          dispatch(loadFavouritesIntoStore(favourites));
+        });
+      getUsers()
+        .then((users) => {
+          dispatch(loadUserIntoStore(users.filter((userData) => userData.sub === user.sub)[0]));
+        });
+    }, 500);
   };
 
   return (
