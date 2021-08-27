@@ -9,7 +9,7 @@ const Country = () => {
   const country = countries.find((country) => country.name === id);
 
   return (
-    <div>
+    <main className="country fade-in">
       {country && (
         <CountryComponent
           country={country}
@@ -23,7 +23,7 @@ const Country = () => {
           }
         />
       )}
-    </div>
+    </main>
   );
 };
 

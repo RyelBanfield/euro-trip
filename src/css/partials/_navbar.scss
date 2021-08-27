@@ -1,11 +1,11 @@
 nav {
+  background-color: #fff;
   display: flex;
   height: 6rem;
   justify-content: space-between;
-  width: 100%;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  width: 100%;
 
   .menu-icon {
     align-items: center;
@@ -31,8 +31,7 @@ nav {
   .euro-trip {
     align-items: center;
     display: flex;
-    flex: 1;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     justify-content: center;
   }
 
@@ -55,7 +54,7 @@ nav {
     z-index: 1;
 
     a {
-      margin: 1.25rem 0.5rem 1.25rem auto;
+      margin: 1rem 1rem 1rem auto;
     }
   }
 

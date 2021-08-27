@@ -30,7 +30,7 @@ const NavBar = () => {
 
       <Link to="/euro-trip" className="euro-trip">Euro Trip</Link>
 
-      <div className={click ? 'mobile-links-active' : 'nav-links'}>
+      <div className={click ? 'mobile-links-active slide-in' : 'nav-links'}>
         {pages.map((page) => (
           <Link key={page.name} to={page.path} onClick={closeMobileMenu}>
             {page.name}

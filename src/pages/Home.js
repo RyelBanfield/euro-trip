@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main>
+    <main className="home fade-in">
       <h1 className="countries-header">European countries</h1>
       {countries.length > 0 && (
         <div className="countries">
