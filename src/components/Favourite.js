@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useAuth0 } from '@auth0/auth0-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
@@ -45,7 +44,7 @@ const Favourite = ({ country, isFavourited }) => {
         .then((users) => {
           dispatch(loadUserIntoStore(users.filter((userData) => userData.sub === user.sub)[0]));
         });
-    }, 500);
+    }, 1000);
   };
 
   return (
