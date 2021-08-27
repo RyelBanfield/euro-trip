@@ -57,7 +57,7 @@ nav .euro-trip {
           justify-content: center;
 }
 
-nav .nav-links {
+nav .mobile-links-inactive {
   display: none;
 }
 
@@ -151,6 +151,29 @@ main {
   }
   to {
     opacity: 1;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out-keyframes 1s;
+          animation: fade-out-keyframes 1s;
+}
+
+@-webkit-keyframes fade-out-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
