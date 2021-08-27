@@ -14,7 +14,8 @@ const Country = () => {
         <CountryComponent
           country={country}
           isFavourited={
-            user.countries
+            user
+            && user.countries
               ? user.countries
                 .find((favouriteCountry) => favouriteCountry.name === country.name)
               !== undefined
