@@ -1,62 +1,46 @@
-import { useAuth0 } from '@auth0/auth0-react';
-import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import PropTypes from 'prop-types';
-import Favourite from './Favourite';
 
-const Country = ({ country, isFavourited }) => {
-  const { isAuthenticated } = useAuth0();
+const Country = ({ countries }) => {
+  const settings = {
+    autoplay: true,
+    autoplaySpeed: 2500,
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1000,
+  };
 
   return (
-    <div key={country.name} className="country">
-      <Link className="country-link" to={`/countries/${country.name}`}>
-        <h2 className="country-name">{country.name}</h2>
-      </Link>
-      {isAuthenticated && (
-      <Favourite country={country} isFavourited={isFavourited} />
-      )}
-      <Link className="country-link" to={`/countries/${country.name}`}>
-        <img src={country.flag} alt={country.name} />
-      </Link>
-      <p className="country-capital">
-        Capital:
-        {' '}
-        {country.capital}
-      </p>
-      <p className="country-population">
-        Population:
-        {' '}
-        {Number(country.population).toLocaleString()}
-      </p>
-      <p className="country-language">
-        Language:
-        {' '}
-        {country.language}
-      </p>
-      <p className="country-demonym">
-        Demonym:
-        {' '}
-        {country.demonym}
-      </p>
-      <p className="country-currency">
-        Currency:
-        {' '}
-        {country.currency}
-      </p>
-    </div>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Slider {...settings}>
+      {Array.isArray(countries)
+        && countries.map((country) => (
+          <div key={country.name}>
+            <img src={country.flag} alt={country.name} />
+            <h3>{country.name}</h3>
+          </div>
+        ))}
+
+      {!Array.isArray(countries)
+        && (
+          <div key={countries.name}>
+            <img src={countries.flag} alt={countries.name} />
+            <h3>{countries.name}</h3>
+          </div>
+        )}
+    </Slider>
   );
 };
 
 Country.propTypes = {
-  country: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    capital: PropTypes.string.isRequired,
-    population: PropTypes.string.isRequired,
-    language: PropTypes.string.isRequired,
-    demonym: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-    flag: PropTypes.string.isRequired,
-  }).isRequired,
-  isFavourited: PropTypes.bool.isRequired,
+  countries: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.object),
+    PropTypes.object,
+  ]).isRequired,
 };
 
 export default Country;

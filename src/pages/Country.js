@@ -9,7 +9,7 @@ const Country = () => {
   const country = countries.find((country) => country.name === id);
 
   return (
-    <main className="country fade-in">
+    <main className="country-page fade-in">
       {country && (
         <CountryComponent
           country={country}
