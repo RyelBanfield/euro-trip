@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries, getFavourites } from '../API';
 import { loadCountriesIntoStore, loadFavouritesIntoStore } from '../redux/actions';
-import CountryComponent from '../components/Country';
+import CountriesSlider from '../components/CountriesSlider';
 import SearchBar from '../components/SearchBar';
 
 const Home = () => {
@@ -24,11 +24,13 @@ const Home = () => {
 
   return (
     <main className="home fade-in">
-      <h1 className="countries-header">European countries</h1>
+      <h1>European countries</h1>
       {countries.length > 0 && (
-        <CountryComponent countries={countries} />
+        <>
+          <CountriesSlider countries={countries} />
+          <SearchBar countries={countries} />
+        </>
       )}
-      <SearchBar />
     </main>
   );
 };

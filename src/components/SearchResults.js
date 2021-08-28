@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const SearchResults = ({ results }) => {
   const [foundResults, setFoundResults] = useState(null);
@@ -13,9 +13,9 @@ const SearchResults = ({ results }) => {
   }, [results]);
 
   return (
-    <div className="search-results">
+    <>
       {foundResults && (
-      <div className="search-results-container">
+      <div className="search-results">
         {results.map((result) => (
           <div className="search-result" key={result.id}>
             <h1>{result.name}</h1>
@@ -24,8 +24,12 @@ const SearchResults = ({ results }) => {
         ))}
       </div>
       )}
-    </div>
+    </>
   );
+};
+
+SearchResults.propTypes = {
+  results: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default SearchResults;

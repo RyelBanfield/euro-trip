@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import CountryComponent from '../components/Country';
+import CountryComponent from '../components/CountriesSlider';
 
 const Country = () => {
   const { id } = useParams();

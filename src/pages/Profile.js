@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import CountryComponent from '../components/Country';
+import CountryComponent from '../components/CountriesSlider';
 
 const Profile = () => {
   const user = useSelector((state) => state.user);

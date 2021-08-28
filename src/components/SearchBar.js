@@ -1,23 +1,25 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import SearchResults from './SearchResults';
 
-const SearchBar = () => {
-  const countries = useSelector((state) => state.countries);
-  const [searchResults, setSearchResults] = useState([]);
+const SearchBar = ({ countries }) => {
+  const [results, setResults] = useState([]);
 
   const handleChange = (e) => {
-    setSearchResults(countries.filter((country) => country.name
+    setResults(countries.filter((country) => country.name
       .toLowerCase().startsWith(e.target.value)));
   };
 
   return (
     <>
-      <input type="text" placeholder="Search Country" onChange={(e) => handleChange(e)} />
-      <SearchResults results={searchResults} />
+      <input className="search-bar" type="text" placeholder="Search Country" onChange={(e) => handleChange(e)} />
+      <SearchResults results={results} />
     </>
   );
+};
+
+SearchBar.propTypes = {
+  countries: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default SearchBar;
