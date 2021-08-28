@@ -24,7 +24,10 @@ const Home = () => {
 
   return (
     <main className="home fade-in">
-      <h1>European countries</h1>
+      <header>
+        <h1>Europe is a big place.</h1>
+        <p>Get information about countries you may visit.</p>
+      </header>
       {countries.length > 0 && (
         <>
           <CountriesSlider countries={countries} />

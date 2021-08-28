@@ -1,0 +1,19 @@
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  justify-content: center;
+}
+
+.slick-slider {
+  padding: 2.5rem;
+  // z-index: -1;
+
+  .slick-track {
+    img {
+      min-height: 30rem;
+      object-fit: cover;
+    }
+  }
+}
