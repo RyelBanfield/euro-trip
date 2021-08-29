@@ -22,7 +22,7 @@ nav {
       i {
         align-items: center;
         display: flex;
-        font-size: 2rem;
+        font-size: 1.5rem;
         justify-content: center;
       }
     }
@@ -39,12 +39,20 @@ nav {
     display: none;
   }
 
+  .auth-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 0.95rem;
+    margin: 1rem;
+    padding: 0;
+  }
+
   .mobile-links-active {
     align-items: center;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
+    font-size: 2rem;
     height: 100vh;
     justify-content: center;
     left: 0;
@@ -54,15 +62,7 @@ nav {
     z-index: 1;
 
     a {
-      margin: 1rem 1rem 1rem auto;
+      margin: 0.5rem 0.75rem 0.5rem auto;
     }
-  }
-
-  .auth-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 1rem;
-    margin: 1rem;
-    padding: 0;
   }
 }

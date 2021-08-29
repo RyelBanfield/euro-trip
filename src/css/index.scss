@@ -7,13 +7,12 @@ $main-font: 'Roboto', sans-serif;
 * {
   box-sizing: border-box;
   margin: 0;
-  // outline: 1px solid black;
   padding: 0;
 }
 
 html,
 body {
-  font-family: sans-serif;
+  font-family: $main-font;
 }
 
 body {

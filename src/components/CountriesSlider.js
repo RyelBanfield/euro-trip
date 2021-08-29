@@ -5,8 +5,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const CountriesSlider = ({ countries }) => {
   const settings = {
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 800,
+    arrows: false,
     dots: false,
     infinite: true,
     slidesToShow: 1,
@@ -20,7 +21,12 @@ const CountriesSlider = ({ countries }) => {
       {countries && countries.map((country) => (
         <div key={country.id}>
           <img src={country.images[0].url} alt={country.name} />
-          <h2>{country.name}</h2>
+          <div className="overlay">
+            <div className="overlay-content">
+              <h2>{country.name}</h2>
+              <h3>{country.capital}</h3>
+            </div>
+          </div>
         </div>
       ))}
     </Slider>

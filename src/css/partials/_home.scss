@@ -2,18 +2,50 @@ header {
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-size: 0.9rem;
   height: 6rem;
   justify-content: center;
+  text-align: center;
 }
 
 .slick-slider {
-  padding: 2.5rem;
-  // z-index: -1;
+  padding: 1rem;
+  width: 100%;
+  z-index: -1;
 
-  .slick-track {
-    img {
-      min-height: 30rem;
-      object-fit: cover;
+  .slick-list {
+    .slick-track {
+      img {
+        min-height: 30rem;
+        object-fit: cover;
+        position: relative;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.369);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .overlay-content {
+          bottom: 0;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          min-width: 288px;
+          padding: 1.5rem;
+          position: absolute;
+
+          h2 {
+            font-size: 1.25rem;
+          }
+
+          h3 {
+            font-size: 1.15rem;
+          }
+        }
+      }
     }
   }
 }
