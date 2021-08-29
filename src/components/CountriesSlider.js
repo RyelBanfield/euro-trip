@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const CountriesSlider = ({ countries }) => {
   const settings = {
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 800,
     arrows: false,
     dots: false,
