@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import { Carousel } from 'react-responsive-carousel';
 import Favourite from './Favourite';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-/* eslint-disable react/prop-types */
 const Country = ({ country, isFavourited }) => (
   <div className="country">
     <h1>{country.name}</h1>
@@ -29,5 +29,21 @@ const Country = ({ country, isFavourited }) => (
     </div>
   </div>
 );
+
+Country.propTypes = {
+  country: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    capital: PropTypes.string.isRequired,
+    population: PropTypes.number.isRequired,
+    language: PropTypes.string.isRequired,
+    demonym: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+    flag: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    })).isRequired,
+  }).isRequired,
+  isFavourited: PropTypes.bool.isRequired,
+};
 
 export default Country;
