@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries, getFavourites } from '../API';
@@ -31,8 +30,8 @@ const Home = () => {
       </header>
       {countries.length > 0 && (
         <>
+          <SearchBar countries={countries} />
           <CountriesSlider countries={countries} />
-          {/* <SearchBar countries={countries} /> */}
         </>
       )}
     </main>

@@ -11,10 +11,10 @@ const SearchBar = ({ countries }) => {
   };
 
   return (
-    <>
-      <input className="search-bar" type="text" placeholder="Search Country" onChange={(e) => handleChange(e)} />
+    <div className="search-container">
+      <input className="search-bar" type="text" placeholder="Search European Countries" onChange={(e) => handleChange(e)} />
       <SearchResults results={results} />
-    </>
+    </div>
   );
 };
 

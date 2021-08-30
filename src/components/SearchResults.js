@@ -18,8 +18,13 @@ const SearchResults = ({ results }) => {
       <div className="search-results">
         {results.map((result) => (
           <div className="search-result" key={result.id}>
-            <h1>{result.name}</h1>
-            <img src={result.images[0].url} alt="" />
+            <img src={result.images[0].url} alt={result.name} />
+            <div className="overlay">
+              <div className="overlay-content">
+                <h2>{result.name}</h2>
+                <h3>{result.capital}</h3>
+              </div>
+            </div>
           </div>
         ))}
       </div>
