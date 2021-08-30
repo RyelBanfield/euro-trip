@@ -124,7 +124,6 @@ header {
 
 .slick-slider .slick-list {
   border-radius: 0.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.369);
 }
 
 .slick-slider .slick-list .slick-track img {
@@ -136,7 +135,7 @@ header {
 
 .slick-slider .slick-list .slick-track .overlay {
   background-color: rgba(0, 0, 0, 0.369);
-  height: 100%;
+  height: 30rem;
   position: absolute;
   top: 0;
   width: 100%;
