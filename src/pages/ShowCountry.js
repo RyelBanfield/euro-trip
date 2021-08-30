@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import CountryComponent from '../components/CountriesSlider';
+import CountryComponent from '../components/Country';
 
-const Country = () => {
+const ShowCountry = () => {
   const { id } = useParams();
   const user = useSelector((state) => state.user);
   const countries = useSelector((state) => state.countries);
@@ -27,4 +27,4 @@ const Country = () => {
   );
 };
 
-export default Country;
+export default ShowCountry;

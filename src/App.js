@@ -13,7 +13,7 @@ const store = createStore(rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const Home = lazy(() => import('./pages/Home'));
-const Country = lazy(() => import('./pages/Country'));
+const Country = lazy(() => import('./pages/ShowCountry'));
 const Profile = lazy(() => import('./pages/Profile'));
 
 const App = () => {
