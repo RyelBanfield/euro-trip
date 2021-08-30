@@ -13,11 +13,11 @@
   }
 
   .search-results {
-    z-index: -1;
-
     .search-result {
-      margin: 1rem 0;
+      margin: 1rem auto;
+      max-width: 628px;
       position: relative;
+      width: 100%;
 
       img {
         border-radius: 0.25rem;

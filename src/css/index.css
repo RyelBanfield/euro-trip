@@ -8,8 +8,6 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: fixed;
-  top: 0;
   width: 100%;
 }
 
@@ -184,13 +182,11 @@ header {
   width: 100%;
 }
 
-.search-container .search-results {
-  z-index: -1;
-}
-
 .search-container .search-results .search-result {
-  margin: 1rem 0;
+  margin: 1rem auto;
+  max-width: 628px;
   position: relative;
+  width: 100%;
 }
 
 .search-container .search-results .search-result img {
@@ -254,10 +250,6 @@ a {
 
 img {
   max-width: 100%;
-}
-
-main {
-  margin-top: 6rem;
 }
 
 .fade-in {
