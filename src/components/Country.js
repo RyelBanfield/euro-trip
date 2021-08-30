@@ -1,4 +1,6 @@
+import { Carousel } from 'react-responsive-carousel';
 import Favourite from './Favourite';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 /* eslint-disable react/prop-types */
 const Country = ({ country, isFavourited }) => (
@@ -12,9 +14,18 @@ const Country = ({ country, isFavourited }) => (
     <p>{`Currency: ${country.currency}`}</p>
     <div className="country-images">
       <img src={country.flag} alt={`Flag of ${country.name}`} />
-      {country && country.images.map((image) => (
-        <img src={image.url} alt={country.capital} key={image} />
-      ))}
+      <Carousel
+        autoPlay
+        emulateTouch
+        interval={2500}
+        infiniteLoop
+        showIndicators={false}
+        stopOnHover={false}
+      >
+        {country && country.images.map((image) => (
+          <img src={image.url} alt={country.capital} key={image} />
+        ))}
+      </Carousel>
     </div>
   </div>
 );
