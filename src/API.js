@@ -2,8 +2,8 @@ const usersEndpoint = 'https://euro-trip-api.herokuapp.com/users';
 const countriesEndpoint = 'https://euro-trip-api.herokuapp.com/countries';
 const favouritesEndpoint = 'https://euro-trip-api.herokuapp.com/favourites';
 
-export const postUser = async (data, accessToken) => {
-  await fetch(usersEndpoint, {
+export const postUser = (data, accessToken) => {
+  fetch(usersEndpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -33,8 +33,8 @@ export const getFavourites = async () => {
   return favourites;
 };
 
-export const postFavourite = async (data, accessToken) => {
-  const response = await fetch(favouritesEndpoint, {
+export const postFavourite = (data, accessToken) => {
+  fetch(favouritesEndpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -42,11 +42,9 @@ export const postFavourite = async (data, accessToken) => {
     },
     body: JSON.stringify(data),
   });
-  const favourite = await response.json();
-  return favourite;
 };
 
-export const deleteFavourite = async (id, accessToken) => {
+export const deleteFavourite = (id, accessToken) => {
   fetch(`${favouritesEndpoint}/${id}`, {
     method: 'DELETE',
     headers: {
