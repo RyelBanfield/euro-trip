@@ -237,11 +237,11 @@ header h1 {
 
 .country-page {
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
-.country-page .country {
+.country {
   background-color: rgba(69, 69, 69, 0.1);
   border-radius: 0.25rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
@@ -251,28 +251,59 @@ header h1 {
   padding: 1.5rem;
 }
 
-.country-page .country .country-header h1 {
+.country .country-header h1 {
   font-size: 1.25rem;
 }
 
-.country-page .country .country-header svg {
+.country .country-header svg {
   color: #ffd900;
   font-size: 2rem;
   margin-top: 0.5rem;
 }
 
-.country-page .country .country-flag {
+.country .country-flag {
   margin: 1rem 0;
   max-width: 270px;
   width: 60%;
 }
 
-.country-page .country p {
+.country p {
   font-size: 1.2rem;
 }
 
-.country-page .country .country-images {
+.country .country-images {
   margin: 1rem 0;
+}
+
+.profile {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.profile .profile-picture {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile .profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile .profile-email {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.profile .favourites h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile .favourites .countries .country {
+  margin-bottom: 4rem;
 }
 
 * {

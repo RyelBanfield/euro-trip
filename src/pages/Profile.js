@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import CountryComponent from '../components/CountriesSlider';
+import CountryComponent from '../components/Country';
 
 const Profile = () => {
   const user = useSelector((state) => state.user);
@@ -13,9 +13,9 @@ const Profile = () => {
 
   return (
     <main className="profile fade-in">
-      <img src={user.picture} alt={user.name} />
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
+      <img className="profile-picture" src={user.picture} alt={user.name} />
+      <h2 className="profile-name">{user.name}</h2>
+      <p className="profile-email">{user.email}</p>
       <div className="favourites">
         <h3>Favourites</h3>
         {currentUserFavouriteCountries.length > 0 && (
