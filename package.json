@@ -1,6 +1,5 @@
 {
   "name": "euro-trip",
-  "homepage": "https://ryelbanfield.github.io/euro-trip",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
