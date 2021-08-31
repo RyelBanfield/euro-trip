@@ -9,6 +9,7 @@ nav {
     align-items: center;
     display: flex;
     position: relative;
+    width: 20%;
     z-index: 2;
 
     button {
@@ -31,18 +32,24 @@ nav {
     display: flex;
     font-size: 1.2rem;
     justify-content: center;
+    width: 60%;
   }
 
   .mobile-links-inactive {
     display: none;
   }
 
-  .auth-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 0.95rem;
-    margin: 1rem;
-    padding: 0;
+  .auth-btn-div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+
+    .auth-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 0.95rem;
+    }
   }
 
   .mobile-links-active {

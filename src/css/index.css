@@ -19,6 +19,7 @@ nav .menu-icon {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  width: 20%;
   z-index: 2;
 }
 
@@ -53,18 +54,30 @@ nav .euro-trip {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 60%;
 }
 
 nav .mobile-links-inactive {
   display: none;
 }
 
-nav .auth-btn {
+nav .auth-btn-div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+}
+
+nav .auth-btn-div .auth-btn {
   background-color: transparent;
   border: none;
   font-size: 0.95rem;
-  margin: 1rem;
-  padding: 0;
 }
 
 nav .mobile-links-active {
@@ -336,6 +349,21 @@ img {
   max-width: 100%;
 }
 
+.go-home {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  height: 65vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
 .fade-in {
   -webkit-animation: fade-in-keyframes 1s;
           animation: fade-in-keyframes 1s;
@@ -388,5 +416,50 @@ img {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse {
+  -webkit-transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  vertical-align: middle;
+}
+
+.hvr-pulse,
+.hvr-pulse:focus,
+.hvr-pulse:active {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: hvr-pulse;
+  -webkit-animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: hvr-pulse;
+  animation-timing-function: linear;
 }
 /*# sourceMappingURL=index.css.map */

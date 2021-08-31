@@ -36,6 +36,15 @@ img {
   max-width: 100%;
 }
 
+.go-home {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  height: 65vh;
+  justify-content: center;
+  width: 100%;
+}
+
 .fade-in {
   animation: fade-in-keyframes 1s;
 }
@@ -64,4 +73,50 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse {
+  -webkit-transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  vertical-align: middle;
+}
+
+.hvr-pulse,
+.hvr-pulse:focus,
+.hvr-pulse:active {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: hvr-pulse;
+  -webkit-animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: hvr-pulse;
+  animation-timing-function: linear;
 }

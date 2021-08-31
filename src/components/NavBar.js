@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaTimes, FaBars } from 'react-icons/fa';
+import { FaTimes, FaBars, FaHome } from 'react-icons/fa';
 import AuthenticationButton from '../auth0/AuthenticationButton';
 
 const pages = [
@@ -28,7 +28,9 @@ const NavBar = () => {
         </button>
       </div>
 
-      <Link to="/euro-trip" className="euro-trip">Euro Trip</Link>
+      <Link to="/euro-trip" className="euro-trip">
+        <FaHome />
+      </Link>
 
       <div className={click ? 'mobile-links-active slide-in' : 'mobile-links-inactive'}>
         {pages.map((page) => (
@@ -38,7 +40,9 @@ const NavBar = () => {
         ))}
       </div>
 
-      <AuthenticationButton />
+      <div className="auth-btn-div">
+        <AuthenticationButton />
+      </div>
 
     </nav>
   );
