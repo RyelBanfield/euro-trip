@@ -6,8 +6,10 @@ const SearchBar = ({ countries }) => {
   const [results, setResults] = useState([]);
 
   const handleChange = (e) => {
-    setResults(countries.filter((country) => country.name.toLowerCase().startsWith(e.target.value)
-    || country.capital.toLowerCase().startsWith(e.target.value)));
+    setResults(countries.filter((country) => country.name.toLowerCase()
+      .startsWith(e.target.value.toLowerCase())
+    || country.capital.toLowerCase()
+      .startsWith(e.target.value.toLowerCase())));
   };
 
   return (
