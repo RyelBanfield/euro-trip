@@ -3,7 +3,7 @@ const countriesEndpoint = 'https://euro-trip-api.herokuapp.com/countries';
 const favouritesEndpoint = 'https://euro-trip-api.herokuapp.com/favourites';
 
 export const postUser = async (data, accessToken) => {
-  const response = await fetch(usersEndpoint, {
+  await fetch(usersEndpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -11,8 +11,6 @@ export const postUser = async (data, accessToken) => {
     },
     body: JSON.stringify(data),
   });
-  const user = await response.json();
-  return user;
 };
 
 export const getUsers = async () => {

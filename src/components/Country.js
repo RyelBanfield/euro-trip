@@ -36,7 +36,7 @@ Country.propTypes = {
   country: PropTypes.shape({
     name: PropTypes.string.isRequired,
     capital: PropTypes.string.isRequired,
-    population: PropTypes.number.isRequired,
+    population: PropTypes.string.isRequired,
     language: PropTypes.string.isRequired,
     demonym: PropTypes.string.isRequired,
     currency: PropTypes.string.isRequired,
