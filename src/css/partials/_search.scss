@@ -7,15 +7,19 @@
 
   .search-bar {
     border-radius: 0.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.369);
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom: 1rem;
+    max-width: 40rem;
     padding: 0.5rem;
     width: 100%;
   }
 
   .search-results {
+    width: 100%;
+
     .search-result {
       margin: 1rem auto;
-      max-width: 628px;
+      max-width: 40rem;
       position: relative;
       width: 100%;
 

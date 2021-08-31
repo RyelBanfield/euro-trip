@@ -1,0 +1,40 @@
+.country-page {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+
+  .country {
+    background-color: rgba(69, 69, 69, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 1.5rem;
+
+    .country-header {
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      svg {
+        color: rgb(255, 217, 0);
+        font-size: 2rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .country-flag {
+      margin: 1rem 0;
+      max-width: 270px;
+      width: 60%;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .country-images {
+      margin: 1rem 0;
+    }
+  }
+}

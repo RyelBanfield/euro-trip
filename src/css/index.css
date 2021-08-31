@@ -107,11 +107,16 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 0.9rem;
+  font-weight: 400;
   height: 6rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+}
+
+header h1 {
+  font-weight: 400;
 }
 
 .slick-slider {
@@ -124,6 +129,9 @@ header {
 
 .slick-slider .slick-list {
   border-radius: 0.25rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+  height: 30rem;
 }
 
 .slick-slider .slick-list .slick-track img {
@@ -176,14 +184,20 @@ header {
 
 .search-container .search-bar {
   border-radius: 0.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.369);
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom: 1rem;
+  max-width: 40rem;
   padding: 0.5rem;
+  width: 100%;
+}
+
+.search-container .search-results {
   width: 100%;
 }
 
 .search-container .search-results .search-result {
   margin: 1rem auto;
-  max-width: 628px;
+  max-width: 40rem;
   position: relative;
   width: 100%;
 }
@@ -219,6 +233,46 @@ header {
 
 .search-container .search-results .search-result .overlay .overlay-content h3 {
   font-size: 1.1rem;
+}
+
+.country-page {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.country-page .country {
+  background-color: rgba(69, 69, 69, 0.1);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1.5rem;
+}
+
+.country-page .country .country-header h1 {
+  font-size: 1.25rem;
+}
+
+.country-page .country .country-header svg {
+  color: #ffd900;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.country-page .country .country-flag {
+  margin: 1rem 0;
+  max-width: 270px;
+  width: 60%;
+}
+
+.country-page .country p {
+  font-size: 1.2rem;
+}
+
+.country-page .country .country-images {
+  margin: 1rem 0;
 }
 
 * {

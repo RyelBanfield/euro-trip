@@ -5,15 +5,17 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Country = ({ country, isFavourited }) => (
   <div className="country">
-    <h1>{country.name}</h1>
-    <Favourite country={country} isFavourited={isFavourited} />
-    <p>{`Capital: ${country.capital}`}</p>
-    <p>{`Population: ${Number(country.population).toLocaleString()}`}</p>
-    <p>{`Language: ${country.language}`}</p>
-    <p>{`Demonym: ${country.demonym}`}</p>
-    <p>{`Currency: ${country.currency}`}</p>
+    <div className="country-header">
+      <h1>{country.name}</h1>
+      <Favourite country={country} isFavourited={isFavourited} />
+    </div>
+    <img className="country-flag" src={country.flag} alt={`Flag of ${country.name}`} />
+    <p>
+      {`
+        With a population of ${Number(country.population).toLocaleString()} people, the ${country.demonym} mainly speak ${country.language} and use the ${country.currency} as their currency. The capital city is ${country.capital}.
+      `}
+    </p>
     <div className="country-images">
-      <img src={country.flag} alt={`Flag of ${country.name}`} />
       <Carousel
         autoPlay
         emulateTouch
