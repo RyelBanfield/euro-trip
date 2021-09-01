@@ -13,9 +13,13 @@ const Profile = () => {
 
   return (
     <main className="profile fade-in">
-      <img className="profile-picture" src={user.picture} alt={user.name} />
-      <h2 className="profile-name">{user.name}</h2>
-      <p className="profile-email">{user.email}</p>
+      {user && (
+        <>
+          <img className="profile-picture" src={user.picture} alt={user.name} />
+          <h2 className="profile-name">{user.name}</h2>
+          <p className="profile-email">{user.email}</p>
+        </>
+      )}
       <div className="favourites">
         <h3>Favourites</h3>
         {currentUserFavouriteCountries.length > 0 && (

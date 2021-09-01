@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main
+  className="profile fade-in"
+>
+  <div
+    className="favourites"
+  >
+    <h3>
+      Favourites
+    </h3>
+  </div>
+</main>
+`;
