@@ -8,21 +8,18 @@ nav {
   .menu-icon {
     align-items: center;
     display: flex;
+    margin-left: 1rem;
     position: relative;
-    width: 20%;
     z-index: 2;
 
     button {
       background-color: transparent;
       border: none;
-      margin: 1rem;
       padding: 0;
 
-      i {
-        align-items: center;
+      .fa-times-bars-icon {
         display: flex;
         font-size: 1.5rem;
-        justify-content: center;
       }
     }
   }
@@ -30,25 +27,33 @@ nav {
   .euro-trip {
     align-items: center;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     justify-content: center;
-    width: 60%;
+
+    .home-icon {
+      display: flex;
+      font-size: 1.5rem;
+    }
   }
 
   .mobile-links-inactive {
     display: none;
   }
 
-  .auth-btn-div {
+  .auth-icon-div {
     align-items: center;
     display: flex;
-    justify-content: center;
-    width: 20%;
+    margin-right: 1rem;
 
     .auth-btn {
       background-color: transparent;
       border: none;
       font-size: 0.95rem;
+
+      .auth-icon {
+        display: flex;
+        font-size: 1.5rem;
+      }
     }
   }
 

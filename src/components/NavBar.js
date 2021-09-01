@@ -24,12 +24,14 @@ const NavBar = () => {
 
       <div className="menu-icon">
         <button type="button" onClick={handleClick}>
-          <i>{click ? <FaTimes /> : <FaBars />}</i>
+          <i className="fa-times-bars-icon">{click ? <FaTimes /> : <FaBars />}</i>
         </button>
       </div>
 
       <Link to="/euro-trip" className="euro-trip">
-        <FaHome />
+        <i className="home-icon">
+          <FaHome />
+        </i>
       </Link>
 
       <div className={click ? 'mobile-links-active slide-in' : 'mobile-links-inactive'}>
@@ -40,7 +42,7 @@ const NavBar = () => {
         ))}
       </div>
 
-      <div className="auth-btn-div">
+      <div className="auth-icon-div">
         <AuthenticationButton />
       </div>
 

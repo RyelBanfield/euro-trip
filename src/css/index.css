@@ -18,19 +18,25 @@ nav .menu-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 1rem;
   position: relative;
-  width: 20%;
   z-index: 2;
 }
 
 nav .menu-icon button {
   background-color: transparent;
   border: none;
-  margin: 1rem;
   padding: 0;
 }
 
-nav .menu-icon button i {
+nav .menu-icon button .fa-times-bars-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+nav .euro-trip {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -43,41 +49,38 @@ nav .menu-icon button i {
           justify-content: center;
 }
 
-nav .euro-trip {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+nav .euro-trip .home-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 60%;
+  font-size: 1.5rem;
 }
 
 nav .mobile-links-inactive {
   display: none;
 }
 
-nav .auth-btn-div {
+nav .auth-icon-div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 20%;
+  margin-right: 1rem;
 }
 
-nav .auth-btn-div .auth-btn {
+nav .auth-icon-div .auth-btn {
   background-color: transparent;
   border: none;
   font-size: 0.95rem;
+}
+
+nav .auth-icon-div .auth-btn .auth-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
 }
 
 nav .mobile-links-active {
@@ -238,6 +241,7 @@ header h1 {
   min-width: 288px;
   padding: 1rem;
   position: absolute;
+  text-align: left;
 }
 
 .search-container .search-results .search-result .overlay .overlay-content h2 {
