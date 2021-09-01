@@ -2,6 +2,8 @@
 
 This project will be submitted as part of my final Microverse Capstone project. It is a front-end web application that will allow users to find some basic information about European countries and also allow adding their favourite countries to their personal favourites list. The project was built using React.
 
+[Click here to view the backend repo](https://github.com/RyelBanfield/euro-trip-api)
+
 ## Technologies Used
 - React
 - React Router
