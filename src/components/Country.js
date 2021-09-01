@@ -17,6 +17,7 @@ const Country = ({ country, isFavourited }) => {
         <div className="country-header">
           <h1>{country.name}</h1>
           {isAuthenticated && <Favourite country={country} isFavourited={isFavourited} />}
+          {!isAuthenticated && <p>Please log in to add to favourites</p>}
         </div>
         <img className="country-flag" src={country.flag} alt={`Flag of ${country.name}`} />
         <p>
