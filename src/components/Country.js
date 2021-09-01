@@ -1,18 +1,14 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import { useSelector } from 'react-redux';
 import { Carousel } from 'react-responsive-carousel';
 import PropTypes from 'prop-types';
 import Favourite from './Favourite';
-import SearchBar from './SearchBar';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Country = ({ country, isFavourited }) => {
   const { isAuthenticated } = useAuth0();
-  const countries = useSelector((state) => state.countries);
 
   return (
     <>
-      <SearchBar countries={countries} />
       <div className="country">
         <div className="country-header">
           <h1>{country.name}</h1>
