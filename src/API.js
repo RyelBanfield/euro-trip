@@ -1,8 +1,7 @@
-const usersEndpoint = 'http://localhost:3000/users';
-const countriesEndpoint = 'http://localhost:3000/countries';
-const favouritesEndpoint = 'http://localhost:3000/favourites';
-// http://localhost:3000/
-// https://euro-trip-api.herokuapp.com/
+const usersEndpoint = 'https://euro-trip-api.herokuapp.com/users';
+const countriesEndpoint = 'https://euro-trip-api.herokuapp.com/countries';
+const favouritesEndpoint = 'https://euro-trip-api.herokuapp.com/favourites';
+
 export const postUser = (data, accessToken) => {
   fetch(usersEndpoint, {
     method: 'POST',
