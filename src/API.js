@@ -1,5 +1,4 @@
-// https://euro-trip-api.herokuapp.com
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://euro-trip-api.herokuapp.com';
 const usersEndpoint = `${baseUrl}/users`;
 const countriesEndpoint = `${baseUrl}/countries`;
 const favouritesEndpoint = `${baseUrl}/favourites`;
