@@ -27,23 +27,3 @@ it('renders main', () => {
   const main = screen.getByRole('main');
   expect(main).toBeInTheDocument();
 });
-
-it('renders banner', () => {
-  render(
-    <Provider store={store}>
-      <Home />
-    </Provider>,
-  );
-  const banner = screen.getByRole('banner');
-  expect(banner).toBeInTheDocument();
-});
-
-it('renders heading', () => {
-  render(
-    <Provider store={store}>
-      <Home />
-    </Provider>,
-  );
-  const heading = screen.getByRole('heading');
-  expect(heading).toBeInTheDocument();
-});

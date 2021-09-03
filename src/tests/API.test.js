@@ -40,9 +40,6 @@ describe('API', () => {
     getUsers();
     expect(mockFetch).toHaveBeenCalledWith(
       usersEndpoint,
-      {
-        method: 'GET',
-      },
     );
   });
 
