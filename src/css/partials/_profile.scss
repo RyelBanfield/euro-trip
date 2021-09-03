@@ -1,0 +1,34 @@
+.profile {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  text-align: center;
+
+  .profile-picture {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-email {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .favourites {
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .countries {
+      .country {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

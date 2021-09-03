@@ -1,0 +1,45 @@
+.slick-slider {
+  margin: auto;
+  max-width: 660px;
+  padding: 1rem;
+  width: 100%;
+  z-index: -1;
+
+  .slick-list {
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+    height: 30rem;
+
+    .slick-track {
+      img {
+        min-height: 30rem;
+        object-fit: cover;
+        position: relative;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.369);
+        height: 30rem;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .overlay-content {
+          bottom: 0;
+          color: #fff;
+          min-width: 288px;
+          padding: 1.5rem;
+          position: absolute;
+
+          h2 {
+            font-size: 1.25rem;
+          }
+
+          h3 {
+            font-size: 1.15rem;
+          }
+        }
+      }
+    }
+  }
+}
