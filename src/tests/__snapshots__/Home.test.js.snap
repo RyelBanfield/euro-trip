@@ -4,13 +4,98 @@ exports[`renders correctly 1`] = `
 <main
   className="home fade-in"
 >
-  <header>
-    <h1>
-      Europe is a big place.
-    </h1>
+  <div
+    className="loading"
+  >
     <p>
-      Get information about countries you may visit.
+      LOADING
     </p>
-  </header>
+    <div
+      aria-busy="true"
+      className=""
+      style={Object {}}
+    >
+      <svg
+        aria-label="audio-loading"
+        height={100}
+        id="goo-loader"
+        width={100}
+      >
+        <filter
+          id="fancy-goo"
+        >
+          <feGaussianBlur
+            in="SourceGraphic"
+            result="blur"
+            stdDeviation="6"
+          />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            result="goo"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+          />
+          <feComposite
+            in="SourceGraphic"
+            in2="goo"
+            operator="atop"
+          />
+        </filter>
+        <g
+          filter="url(#fancy-goo)"
+        >
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            dur="1.2s"
+            from="0 50 50"
+            id="mainAnim"
+            repeatCount="indefinite"
+            to="359 50 50"
+            type="rotate"
+          />
+          <circle
+            cx="50%"
+            cy="40"
+            fill="#000"
+            r={11}
+          >
+            <animate
+              attributeName="cy"
+              attributeType="XML"
+              begin="0;cAnim1.end+0.2s"
+              calcMode="spline"
+              dur="0.6s"
+              id="cAnim1"
+              keySplines="0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"
+              keyTimes="0;0.3;1"
+              values="40;20;40"
+            />
+          </circle>
+          <circle
+            cx="50%"
+            cy="60"
+            fill="#000"
+            r={11}
+          >
+            <animate
+              attributeName="cy"
+              attributeType="XML"
+              begin="0.4s;cAnim2.end+0.2s"
+              calcMode="spline"
+              dur="0.6s"
+              id="cAnim2"
+              keySplines="0.09, 0.45, 0.16, 1;0.09, 0.45, 0.16, 1"
+              keyTimes="0;0.3;1"
+              values="60;80;60"
+            />
+          </circle>
+        </g>
+      </svg>
+    </div>
+    <p>
+      PLEASE WAIT SERVER MAY BE ASLEEP
+    </p>
+  </div>
 </main>
 `;
