@@ -2,6 +2,7 @@ const baseUrl = 'https://euro-trip-api.herokuapp.com';
 const usersEndpoint = `${baseUrl}/users`;
 const countriesEndpoint = `${baseUrl}/countries`;
 const favouritesEndpoint = `${baseUrl}/favourites`;
+
 export const postUser = (data, accessToken) => {
   fetch(usersEndpoint, {
     method: 'POST',
@@ -14,9 +15,7 @@ export const postUser = (data, accessToken) => {
 };
 
 export const getUsers = async () => {
-  const response = await fetch(usersEndpoint, {
-    method: 'GET',
-  });
+  const response = await fetch(usersEndpoint);
   const users = await response.json();
   return users;
 };
