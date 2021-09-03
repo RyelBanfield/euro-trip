@@ -1,0 +1,78 @@
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  min-height: 6rem;
+  width: 100%;
+
+  .menu-icon {
+    align-items: center;
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+    z-index: 2;
+
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+
+      .fa-times-bars-icon {
+        display: flex;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .euro-trip {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+
+    .home-icon {
+      display: flex;
+      font-size: 1.5rem;
+    }
+  }
+
+  .mobile-links-inactive {
+    display: none;
+  }
+
+  .auth-icon-div {
+    align-items: center;
+    display: flex;
+    margin-right: 1rem;
+
+    .auth-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 0.95rem;
+
+      .auth-icon {
+        display: flex;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .mobile-links-active {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    a {
+      margin: 0.5rem 0.75rem 0.5rem auto;
+    }
+  }
+}

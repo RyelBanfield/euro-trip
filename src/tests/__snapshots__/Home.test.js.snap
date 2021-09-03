@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main
+  className="home fade-in"
+>
+  <header>
+    <h1>
+      Europe is a big place.
+    </h1>
+    <p>
+      Get information about countries you may visit.
+    </p>
+  </header>
+</main>
+`;
